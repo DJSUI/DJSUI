@@ -1,0 +1,89 @@
+20250627
+
+1 Configure the firewall on servera and serverb such that:
+	* Client within　172.25.	250.0/24  have SSH access to your virtual systems  
+	* Client within  172.24.250.0/24 do not have remote SSH access to your virtual systems  
+
+	* Configure denial rules to use a "reject" instead of  a "drop"
+
+
+2 Configure the eth0 on servera and serverb with the following IPv6 address:
+	* Servera has the address 2018:ac18::432/64 
+	* Serverb has the address 2018:ac18::43c/64 
+	* Both systems are reachable from systems in the 2018:ac18/64 network  
+	* The address assignments persist across system reboots  
+	* Both systems are also reachable via IPv4 at their current address  
+
+3 On servera configure a DHCP server to provide both fixed and dynamic IPv4 address 
+	for the 192.168.1.0/24 network as follows:
+	* Dynamic configuration 
+	* Dynamic IPs must be between 192.168.1.125 and 192.168.1.200 
+	* DNS server address  
+	* DNS domain name  
+	* Default gateway  
+	* Default lease time 600 
+	* Max lease time 3000 
+	fixed address information: 
+	* IP 192.168.1.10 is assigned to hardwared to hardware address 52:54:00:02:fa:0c 
+	* IP 192.168.1.11 is assigned to hardware address 52:54:00:02:fa:0d
+
+4 On serverb，BIND has been installed，and partially configured.
+  Complete the BIND configuration such that your DNS server serves
+  both forward and reverse lookups for：
+  	* Serverc.rh358.example.com 192.168.1.10
+  	* Serverd.rh358.example.com 192.168.1.11 
+  	* Make sure that any upstream or downstream caching nameservers are appropriately updated
+
+5 Configure SMB services on servera as follows:
+	* The SMB server is a member of the STAFF workgroup
+	* The service shares the /groupdir directory.The share's name is common
+	* The common share is available to lab.example.com domain clients only
+	* The common share is browseable
+	* The user barney has read access to the share， authenticating with the password redhat if necessary
+
+6 On servera share the /data directory via SMB as follows:
+	* The share is named data
+	* The shared data is only available to clients in the lab.example.com domain
+	* The shared data is browseable
+	* magneter has read access to the share，authenticating with the password redhat
+	* wolferyne has read and write access to the share，authenticating with the password redhat
+	* The SMB share is permanently mounted on serverb at /mnt/multi using the credentials of magneter
+	* The share allows anyone who can authenticate as wolferyne to temporarily acquire write permissions
+
+7 Configure DNS  
+	* Configure NFS on servera to export the /public directory with read only access to the lab.example.com domain only
+
+8 Mount an NFS share
+	Configure serverb to mount the following NFS share from servera.lab.example.com : 
+		* /public is mounted to /mnt/nfsmount
+		* The file system is automatically mounted at boot 
+
+
+9 Implement a web server
+	Implement a web server on servera for the site and perform the following steps:
+		* Download  http://classroom.example.com/file  
+		* Rename the downloaded file to index.html.Do NOT make any modifications to the content of this file
+		* Copy this index.html to the DocumentRoot of your webserver
+		* Clients within lab.example.com can access the webserver
+		* Clients within my133t.org are denied access to the webserver
+
+
+10 Configure secure webservices
+	* Configure TLS encryption for the web server for https://servera.lab.example.com
+	* A signed certificate for the web server can be found at http://classroom.example
+	* The associated key for the certificate is at http://classroom.example.com/files/servera.key
+	*  The certificate for the signing authority is at http://classroom.example.com/files/cacert.crt
+
+11 configure a virtual host 
+	* The DocumentRoot for the virtual host is /var/www/virtual
+	* The DocumentRoot contains a copy  of http://classroom.example.com/files/www.html 
+	   named index.html. Do not make any modification to the content of this file  
+	* The user barney can create content in /var/www/virtual 
+	* The original web site http://servera.lab.examplecom is still accessable  
+
+12 Configure web content access 
+	On your web server on servera create a directory named confidential under the DocumentRoot directory and configure it as follows:
+		* Copy http://classroom.example.com/file/private.html  into this directory and rename it index.html.Do not change the content of this file  
+		* The contents of confidential is visible to anyone browsing from servera (including localhost) but is not accessible from servera (including localhost ) but is not accessible from other locations  
+		
+
