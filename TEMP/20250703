@@ -1,0 +1,58 @@
+1 Configure System user fill up requriemetnts below:
+	*Git user name: student 
+	*Git user email: student@lab.example.com  
+	*Default push method: simple  
+
+
+2  fetch project from xxxx 
+	*Playbook name is create_users.yml 
+	*Add user greg to group developer 
+	*Add serverc to group dev  
+	*commit and push code  
+
+3  add alias to Web server  
+	* git project from xxxx 
+	* alias playbook is  install_httpd_alias.yml 
+	* when only insall alias , the served will be restarted ,
+	  the will not be restarted  if it alreadly has been install alias 
+	* commit  and push code  
+
+4 　manage content of server  
+	there is not complete playbook on Git repository names manage_content.yml  
+	for mange webserver 
+	* when running playbook with lable alpha , generated content [Que Sera] will be deploy  /var/www/html  
+	  on server dev 
+	* when running playbook with  lable beta , gentrated content [whatever] will be depoy /var/www/html  
+	  on server dev
+	* if running playbook without any lable  , this no content will be appear on the server dev  
+	* commit and push code  
+
+5   modify anisble config file  
+	*  gather facts will be aband  in default  
+	*  the most counts of connect is 45 
+	* commit and push code 
+
+6  create user from list  
+	*user_information is user list including :
+		name ,first name ,middle name ,last name ,uid  
+	* do not modify inventory  
+	* every account should be allocated random  password 
+	*  password file will be saved in  password-file  
+	* everyname should be  capitalize  
+	* commit and push code  
+
+7  install collection  
+	install collectoin from hub.lab.example.com  using admin  
+	collectio should be isntalled in /home/student/mycollections 
+
+8  DIY collection  
+	Project including : 
+		task_main.yml  
+		user.conf 
+	cofigure Collection  fill up requirements : 
+		* Collection name rhel.user  
+		* Collection including a role whose name is newuser 
+		* file tasks_main.yml be at the roles/newuser/tasks/main.yml 
+		* user.conf be at roles/newuser/files/users.conf 
+		* upload collection rhel.user to  hub.lab.example.com namespace rhel  
+		
