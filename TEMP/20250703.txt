@@ -1,6 +1,6 @@
 1 Configure System user fill up requriemetnts below:
 	*Git user name: student 
-	*Git user email: student@lab.example.com  
+	*Git user email: 								 
 	*Default push method: simple  
 
 
@@ -36,6 +36,7 @@
 	*user_information is user list including :
 		name ,first name ,middle name ,last name ,uid  
 	* do not modify inventory  
+	*  the playbook name's manage_accounts.yml, it could create users  base on user_information
 	* every account should be allocated random  password 
 	*  password file will be saved in  password-file  
 	* everyname should be  capitalize  
