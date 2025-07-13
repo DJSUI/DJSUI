@@ -33,7 +33,7 @@
 	* commit and push code 
 
 6  create user from list  
-	*user_information is user list including :
+	*user_information.yml is user list including :
 		name ,first name ,middle name ,last name ,uid  
 	* do not modify inventory  
 	*  the playbook name's manage_accounts.yml, it could create users  base on user_information
