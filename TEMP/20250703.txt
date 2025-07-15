@@ -38,12 +38,12 @@
 	* do not modify inventory  
 	*  the playbook name's manage_accounts.yml, it could create users  base on user_information
 	* every account should be allocated random  password 
-	*  password file will be saved in  password-file  
+	*  password file will be saved in  password-username  
 	* everyname should be  capitalize  
 	* commit and push code  
 
 7  install collection  
-	install collectoin from hub.lab.example.com  using admin  
+	install redhat-rhel_system_roles Collection  from hub.lab.example.com  using admin   
 	collectio should be isntalled in /home/student/mycollections 
 
 8  DIY collection  
