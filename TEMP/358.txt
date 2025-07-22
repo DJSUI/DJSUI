@@ -59,9 +59,10 @@
 		* The file system is automatically mounted at boot 
 
 
+9-12 webQs
 9 Implement a web server
 	Implement a web server on servera for the site and perform the following steps:
-		* Download  http://classroom.example.com/file  
+		* Download  http://classroom.example.com/station.html  
 		* Rename the downloaded file to index.html.Do NOT make any modifications to the content of this file
 		* Copy this index.html to the DocumentRoot of your webserver
 		* Clients within lab.example.com can access the webserver
@@ -70,7 +71,7 @@
 
 10 Configure secure webservices
 	* Configure TLS encryption for the web server for https://servera.lab.example.com
-	* A signed certificate for the web server can be found at http://classroom.example
+	* A signed certificate for the web server can be found at http://classroom.example//servera.crt 
 	* The associated key for the certificate is at http://classroom.example.com/files/servera.key
 	*  The certificate for the signing authority is at http://classroom.example.com/files/cacert.crt
 
