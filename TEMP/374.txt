@@ -1,15 +1,25 @@
+
+infor 
+	Git hub : https://git.lab.example.com/    user: student pws: Student@123 
+	Execute Environment: ee-supported-rhel8:latest
+	ansible automate controller: https://controller.lab.example.com/
+	ansible hub: https://hub.lab.example.com/    user student pwd redhat123 
+
+
+
 1 Configure System user fill up requriemetnts below:
 	*Git user name: student 
-	*Git user email: 								 
+	*Git user email: student@lab.example.com						 
 	*Default push method: simple  
 
-
+https://git.lab.example.com/student/create_users.git
 2  fetch project from xxxx 
 	*Playbook name is create_users.yml 
 	*Add user greg to group developer 
 	*Add serverc to group dev  
 	*commit and push code  
 
+https://git.lab.example.com/student/httpd_alias.git
 3  add alias to Web server  
 	* git project from xxxx 
 	* alias playbook is  install_httpd_alias.yml 
@@ -17,21 +27,25 @@
 	  the will not be restarted  if it alreadly has been install alias 
 	* commit  and push code  
 
+https://git.lab.example.com/student/manage_content.git
 4 　manage content of server  
 	there is not complete playbook on Git repository names manage_content.yml  
 	for mange webserver 
-	* when running playbook with lable alpha , generated content [Que Sera] will be deploy  /var/www/html  
+	* when running playbook with lable alpha , generated content [Que Sera] will be deploy  /var/www/html/index.html  
 	  on server dev 
-	* when running playbook with  lable beta , gentrated content [whatever] will be depoy /var/www/html  
+	* when running playbook with  lable beta , gentrated content [whatever] will be depoy /var/www/html/index.html  
 	  on server dev
 	* if running playbook without any lable  , this no content will be appear on the server dev  
 	* commit and push code  
 
+
+https://git.lab.example.com/student/tune_ansible.git
 5   modify anisble config file  
 	*  gather facts will be aband  in default  
 	*  the most counts of connect is 45 
 	* commit and push code 
 
+ https://git.lab.example.com/student/create_users_complex.git
 6  create user from list  
 	*user_information.yml is user list including :
 		name ,first name ,middle name ,last name ,uid  
