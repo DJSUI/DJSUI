@@ -60,6 +60,8 @@ https://git.lab.example.com/student/tune_ansible.git
 	install redhat-rhel_system_roles Collection  from hub.lab.example.com  using admin   
 	collectio should be isntalled in /home/student/mycollections 
 
+
+https://git.lab.example.com/student/custom_collection.git
 8  DIY collection  
 	Project including : 
 		task_main.yml  
@@ -70,6 +72,8 @@ https://git.lab.example.com/student/tune_ansible.git
 		* file tasks_main.yml be at the roles/newuser/tasks/main.yml 
 		* user.conf be at roles/newuser/files/users.conf 
 		* upload collection rhel.user to  hub.lab.example.com namespace rhel  
+
+
 
 9 	Build execution envrioment1 base on  requirements below:
 	*custom exeuction enironment name -> ee-user-supported:2.2
@@ -96,7 +100,7 @@ https://git.lab.example.com/student/tune_ansible.git
  	*  main.yml only be used in  host list  testing  
  	* commit change and push  
 
-12 use variable in playbook  git clone  https://git.lab.example.com/student/master_playbook.git 
+12 use variable in playbook  git clone  https://git.lab.example.com/student/install_httpd_alias			.git 
 	repository including:
 		* ansible default configure file  -> ansible.cfg 
 		* dynamic inventory  script -> inventory.py 
