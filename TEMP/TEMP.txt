@@ -1,17 +1,5 @@
-https://1drv.ms/o/c/3ddd13bd5d5a3d03/EgM9Wl29E90ggD0qBgAAAAABIa7pWOWN8q7FAq2o5I8nzg?e=dTFHRc       OneNote  
+zaodaotianligongshu
 
 
-
-
-
-9#######################
-
-Build execution envrioment base on  requirements below: 
- 
-
- 2  fetch project from xxxx 
-	*Playbook name is create_users.yml 
-	*Add user greg to group developer 
-	*Add serverc to group dev  
-	*commit and push code  
-
+ansible doc
+https://docs.ansible.com/
